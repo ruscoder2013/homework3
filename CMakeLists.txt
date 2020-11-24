@@ -1,26 +1,18 @@
 cmake_minimum_required(VERSION 3.5)
 
-project(print_ip VERSION 0.0.$ENV{TRAVIS_BUILD_NUMBER})
+project(print_ip)
 
 add_executable(print_ip sfinae.cpp)
 set_target_properties(print_ip PROPERTIES CXX_STANDARD 17 CXX_STANDARD_REQUIRED ON)
 
 if (MSVC)
     target_compile_options(
-            main PRIVATE
-            /W4
-    )
-    target_compile_options(
-            test_list PRIVATE
+            print_ip PRIVATE
             /W4
     )
 else ()
     target_compile_options(
-            main PRIVATE
-            -Wall -Wextra -pedantic -Werror
-    )
-    target_compile_options(
-            test_list PRIVATE
+            print_ip PRIVATE
             -Wall -Wextra -pedantic -Werror
     )
 endif()
