@@ -1,6 +1,6 @@
 cmake_minimum_required(VERSION 3.5)
 
-project(print_ip)
+project(print_ip VERSION 0.0.$ENV{TRAVIS_BUILD_NUMBER})
 
 add_executable(print_ip sfinae.cpp)
 set_target_properties(print_ip PROPERTIES CXX_STANDARD 17 CXX_STANDARD_REQUIRED ON)
