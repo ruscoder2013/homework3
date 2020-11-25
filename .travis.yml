@@ -12,6 +12,8 @@ script:
 - cmake --build .
 
 - cmake --build . --target package
+- cd ..
+- doxigen Doxigen
 
 deploy:
   provider: script
