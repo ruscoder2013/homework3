@@ -1,0 +1,5 @@
+/home/travis/build/ruscoder2013/homework3/build/CMakeFiles/rebuild_cache.dir
+/home/travis/build/ruscoder2013/homework3/build/CMakeFiles/package.dir
+/home/travis/build/ruscoder2013/homework3/build/CMakeFiles/package_source.dir
+/home/travis/build/ruscoder2013/homework3/build/CMakeFiles/print_ip.dir
+/home/travis/build/ruscoder2013/homework3/build/CMakeFiles/edit_cache.dir
