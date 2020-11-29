@@ -10,6 +10,10 @@ namespace is_stl_container_impl{
   template <typename... Args> struct is_stl_container<std::list              <Args...>>:std::true_type{};
 }
 
+/*!
+Метафункция определяющая, является ли тип T, контейнером типа list или vector
+\param[in] T - тип
+*/
 template <typename T> struct is_stl_container {
   static constexpr bool const value = is_stl_container_impl::is_stl_container<std::decay_t<T>>::value;
 };
@@ -20,6 +24,10 @@ template<class B1, class... Bn>
 struct disjunction<B1, Bn...> 
     : std::conditional_t<bool(B1::value), B1, disjunction<Bn...>>  { };
 
+/*!
+Метафункция определяющая, является ли тип T строкой
+\param[in] T - тип
+*/
 template<typename T>
 struct is_string
         : public disjunction<
@@ -29,6 +37,9 @@ struct is_string
         > {
 };
 
+/*!
+Шаблон функции, печатающий ip адрес
+*/
 template<typename T,
          typename std::enable_if<std::is_integral<T>::value, int>::type = 0>
 void print_ip(T number)
